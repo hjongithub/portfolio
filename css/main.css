@@ -250,6 +250,9 @@ header .allmenu_wrap ul li.on:hover .arrow {
     border: 1px solid #333;
     background-color: #fff;
 }
+#fp-nav ul li:last-child a span {
+    display: none;
+}
 #fp-nav ul li a.active span{
     background-color: #9a54d6;
     transition: .3s all ease;
