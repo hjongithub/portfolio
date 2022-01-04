@@ -1,4 +1,5 @@
 $(function(){
+
     $('#fullpage').fullpage({
 		//options here
 		autoScrolling:true,
@@ -8,21 +9,16 @@ $(function(){
 		navigation: true,
 		navigationPosition: 'left',
 		afterLoad: function(anchorLink, index){
-			// console.log("현재 섹션 = " + index);
 			if(index == 2){
 				$('.photo').animate({'left': 0},1000);
-			};
-			if(index == 3){
-				$('.cover,.modal').fadeIn();
-			}
-			if(index == 4){
-				$('.cover,.modal').fadeIn();
 			}
 		},
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
 			console.log('현재 슬라이드 번호 =' + slideIndex);
 		},
 	});
+	
+
 
 	// 전체메뉴 효과
 		let num = 0;
@@ -68,6 +64,59 @@ $(function(){
 		$('.modal,.cover').fadeOut();
 	});
 
+	// 그래픽디자인 영역 효과
+
+	var filtered = false;
+	$('.design_list li').click(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+	});
+	$('.design_item_wrap').slick({
+		arrows: true,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+	});
+
+	var filtered = false;
+$('.filter-btn').on('click',function(){
+    var filter = $(this).data('attribute');
+    if(filter=='all'){
+        $('.employees').slick('slickUnfilter');
+    }else{
+        $('.employees').slick('slickUnfilter').slick('slickFilter','.'+filter);
+    }
+    $(this).addClass('active');
+    filtered = true;
+});   
+
+
+
+
+
+
+	$('.design_item').hover(function(){
+		$(this).find('.item_cover').stop().fadeIn(300);
+		$(this).find('.txt_area').addClass('on');
+	}, function(){
+		$(this).find('.item_cover').stop().fadeOut(300);
+		$(this).find('.txt_area').removeClass('on');
+	});
+	$('.design_item').click(function(){
+		$('.modal,.cover').fadeIn();
+	});
+
+
+	// 컨택 영역 효과
+	// $('label').focus(function(){
+	// 	$(this).parent().attr('type','checked');
+	// });
+
+
+	// $('.textarea').focusout(function(){
+	// 	$(this).removeClass('on');
+	// });
+	// $('input').keydown(function(){
+	// 	$(this).parent().addClass('on');
+	// })
 
 });
 
