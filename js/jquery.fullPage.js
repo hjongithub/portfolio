@@ -170,7 +170,7 @@
             slideSelector: SLIDE_DEFAULT_SEL,
 
             //events
-            afterLoad: null,
+            afterLoad:null,
             onLeave: null,
             afterRender: null,
             afterResize: null,
@@ -558,7 +558,7 @@
             if(document.readyState === 'complete'){
                 scrollToAnchor();
             }
-            $window.on('load', scrollToAnchor);
+            $window.on('load', scrollToAnchor());
         }
 
         function bindEvents(){
