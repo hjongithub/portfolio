@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/jquery.fullPage.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/all.js"></script>
     <script src="js/map.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body onload="initialize()">
+<body onload="initialize()";>
     <div class="intro">
         <div class="intro_wrap">
             <div class="circle"></div>
@@ -52,7 +54,6 @@
             </div>
         </div>
     </div>
-
     <header>
         <h1><a href="index.html">박효진포트폴리오</a></h1>
         <div class="m_btn">
@@ -208,6 +209,111 @@
         <!-- graphic design -->
         <div class="section design">
             <h2>GRAPHIC DESIGN</h2>
+            <ul class="design_list">
+                <li id="all" class="on">All</li>
+                <li id="draft">draft</li>
+                <li id="banner">banner</li>
+                <li id="etc">etc</li>
+            </ul>
+            <div class="design_item_wrap">
+                <div class="design_item draft">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란1</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item draft">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란2</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item draft">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란3</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item draft">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란4</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item banner">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란5</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item banner">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란6</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item banner">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란7</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+                <div class="design_item banner">
+                    <div class="image_area">
+                        <a href="#">
+                            <div class="item_cover"></div>
+                            <img src="./design/mockup_finish/design/목업_마블페인트_배너.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="txt_area">
+                        <h4>타이틀란8</h4>
+                        <p>설명란</p>
+                    </div>
+                </div>
+              </div>
+              
         </div>
         <!-- publishing -->
         <div class="section publishing">
@@ -230,9 +336,18 @@
                         <form action="">
                             <fieldset>
                                 <legend>컨택 입력폼</legend>
-                                <input type="text" placeholder="제목">
-                                <input type="text" placeholder="회신주소">
-                                <textarea name="" id="" cols="30" rows="5" placeholder="내용을 입력해주세요."></textarea>
+                                <div class="textarea">
+                                    <input type="text" id="title">
+                                    <label for="title">제목</label>
+                                </div>
+                                <div class="textarea">
+                                    <input type="text" id="address">
+                                    <label for="address">회신주소</label>
+                                </div>
+                                <div class="textarea lastta">
+                                    <input type="text" id="maintext">
+                                    <label for="maintext">내용을 입력해주세요.</label>
+                                </div>                            
                                 <button type="submit" class="sendform">보내기</button>
                             </fieldset>
                         </form>
